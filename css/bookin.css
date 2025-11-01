@@ -1,0 +1,94 @@
+:root {
+            --blue: #0b63d6;
+            --blue-light: #2d9cfa;
+            --bg: #f6f9ff;
+            --card: #ffffff;
+            --text: #334b68;
+            --muted: #6b88aa;
+            --shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+            --border: #e1e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Inter", sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            padding: 30px;
+            min-height: 100vh;
+        }
+
+        h2 {
+            color: var(--blue);
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '📅';
+            font-size: 32px;
+        }
+
+        .table-container {
+            background: var(--card);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: none;
+        }
+
+        th {
+            background: linear-gradient(135deg, var(--blue), var(--blue-light));
+            color: white;
+            font-weight: 600;
+            padding: 15px 12px;
+            text-align: left;
+            font-size: 14px;
+            border: none;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+            border: none;
+        }
+
+        tr:nth-child(even) {
+            background: #f8faff;
+        }
+
+        tr:hover {
+            background: #e8f0ff;
+            transition: background 0.3s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .table-container {
+                overflow-x: auto;
+            }
+            
+            table {
+                min-width: 800px;
+            }
+        }
